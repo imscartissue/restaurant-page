@@ -1,0 +1,140 @@
+@font-face {
+    font-family: clean-notes;
+    src: url("./fonts/clean-notes.woff2");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Colors are listed in the order lightest to darkest */
+    --white: #FCFBF9;
+    --lassi: #E2BDB2;
+    --coffee: #DDC5B2;
+    --frappe: #B79F90;
+    --black: #130C07;
+}
+
+body {
+    background-color: var(--white);
+    background-image: url("./images/background.jpg");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: clean-notes, sans-serif;
+}
+
+button {
+    font-family: clean-notes, sans-serif;
+}
+
+header {
+    background-color: var(--black);
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header nav {
+    background-color: var(--coffee);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.3rem 5rem;
+    border-radius: 24px;
+    margin-top: 1px;
+}
+
+header nav button {
+    font-size: 1.4rem;
+    background-color: var(--frappe);
+    color: var(--black);
+    border: none;
+    border-radius: 14px;
+    padding: 0.4em 1em;
+    transition: 0.1s;
+}
+
+header nav button:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+#content {
+    height: 80svh;
+    width: 80svw;
+    position: fixed;
+    top: 5rem;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--white);
+    padding: 1rem;
+    overflow-y: auto;
+    border-radius: 25px;
+}
+
+img {
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.119);
+}
+
+.menu-grid-container img {
+    transition: 0.1s;
+}
+
+.menu-grid-container img:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+.home-grid-container img {
+    transition: 0.1s;
+}
+
+.home-grid-container img:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+.info-container img {
+    transition: 0.1s;
+}
+
+.info-container img:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+.info-container .my-name {
+    transition: 0.1s;
+}
+
+.info-container .my-name:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: translateX(-50%) scale(0.8);
+        opacity: 0;
+        
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.zoom-animation {
+    animation: zoomIn 0.1s ease-out;
+    transform-origin: center center;
+}
